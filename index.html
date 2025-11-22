@@ -2428,6 +2428,39 @@ color: #fff;
             padding: 10px 12px;
         }
     }
+
+    /* Elementor Heading Styles */
+    .elementor-heading-title {
+        padding: 0;
+        margin: 0;
+        line-height: 1
+    }
+
+    .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit
+    }
+
+    .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+        font-size: 15px
+    }
+
+    .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+        font-size: 19px
+    }
+
+    .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+        font-size: 29px
+    }
+
+    .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+        font-size: 39px
+    }
+
+    .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+        font-size: 59px
+    }
   </style>
 </head>
 <body>
@@ -2456,40 +2489,6 @@ color: #fff;
             <div class='elementor-widget-wrap elementor-element-populated'>
                 <div class='elementor-element elementor-element-6b855585 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading' data-element_type='widget' data-id='6b855585' data-widget_type='heading.default'>
                     <div class='elementor-widget-container'>
-                        <style>
-                            /*! elementor - v3.16.0 - 17-10-2023 */
-                            .elementor-heading-title {
-                                padding: 0;
-                                margin: 0;
-                                line-height: 1
-                            }
-
-                            .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                                color: inherit;
-                                font-size: inherit;
-                                line-height: inherit
-                            }
-
-                            .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                                font-size: 15px
-                            }
-
-                            .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                                font-size: 19px
-                            }
-
-                            .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                                font-size: 29px
-                            }
-
-                            .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                                font-size: 39px
-                            }
-
-                            .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                                font-size: 59px
-                            }
-                        </style>
                         <h3 class='elementor-heading-title elementor-size-default'>Consultas Gratis</h3>
                     </div>
                 </div>
@@ -2537,14 +2536,18 @@ color: #fff;
     <img alt='Imagen' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgowFHG4TbQv_B4TaNiz0f3p3ruaR9I3AN-01I3jm0b6njG7oTew85e6rLXppiqdfMWgBqZTJ_MsQSXkhftI3FE6Sb2Wug2AL5qmOldldtrkKir0HnYoLHzahcuvCJ23M8FwyScOJaa2Y6DteMAWPoKqEMM1wu6KHmWp7_5xj6uVAc_-dQoGnSkCVJZhpQn/s16000/81FoYfMQltL._AC_SL1500_.jpg'/>
 </div>
 
-<form id="whatsapp-form">
+<form id="whatsapp-form" method="get" target="_top">
     <label for="nombre">Nombre completo:</label>
     <input type="text" id="nombre" name="nombre" maxlength="30" required 
-           on="input-debounced:AMP.setState({nombre: event.value})"><br> 
+           on="input-debounced:AMP.setState({nombre: event.value})" 
+           role="textbox" 
+           tabindex="0"><br> 
 
     <label for="consulta">Consulta:</label>
     <textarea id="consulta" name="consulta" maxlength="90" required
-              on="input-debounced:AMP.setState({consulta: event.value})"></textarea><br>
+              on="input-debounced:AMP.setState({consulta: event.value})" 
+              role="textbox" 
+              tabindex="0"></textarea><br>
 
     <a [href]="'https://wa.me/13323337351?text=' + 'Hola Maestro Evaristo, mi nombre es ' + (nombre || '') + '. ' + (consulta || '')" 
        href="https://wa.me/13323337351?text=Hola%20Maestro%20Evaristo" 
