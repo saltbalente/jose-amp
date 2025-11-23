@@ -369,6 +369,7 @@ width: 100%;
 #outer-wrapper{
 max-width: 1133px;
 background-color: #FFF;
+margin: 0 auto;
 }
 @media only screen and (max-width: 1006px) {
 
@@ -386,10 +387,15 @@ display:none;
 #content-wrapper{
 margin: 0 auto;
 position: relative;
-width: 1050px;
-max-width: 100%;
+width: 100%;
+max-width: 1200px;
 display: block;
-padding: 0px 0 0;
+padding: 0px 20px;
+}
+@media (max-width: 767px) {
+    #content-wrapper {
+        padding: 0;
+    }
 }
 #sidebar-wrapper{
 margin:0px;
@@ -2090,6 +2096,9 @@ color: #fff;
         border-bottom: 2px solid #ffd700;
         margin: 20px 0;
         padding: 20px 0;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .services-track {
